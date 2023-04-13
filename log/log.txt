@@ -1,0 +1,16 @@
+2023-04-07 11:04:09,599 INFO: 开始训练模型,method:deambooth
+2023-04-07 11:04:12,292 INFO: 配置dreamboothconfig.toml文件
+2023-04-07 11:04:44,454 INFO: 图片批量打标签:../dataset/dreambooth/2_abd boy
+2023-04-07 11:05:16,759 INFO: 图片批量打标签:../dataset/dreambooth/2_adasda gril
+2023-04-07 11:05:49,037 INFO: 图片批量打标签:../dataset/dreambooth_reg/2_boy
+2023-04-07 11:06:22,308 INFO: 图片批量打标签:../dataset/dreambooth_reg/2_gril
+2023-04-07 11:06:22,308 INFO: 开始训练......
+2023-04-07 11:06:36,110 ERROR: {'message': CalledProcessError(1, ['python', '../train_db.py', '--pretrained_model_name_or_path=123123', '--dataset_config=./dreamboothconfig.toml', '--output_dir=../dataset/dreambooth_out', '--output_name=dreamboothmodel--save_model_as=safetensors--prior_loss_weight=1.0', '--learning_rate=1e-6', '--max_train_steps=1600', '--use_8bit_adam', '--mixed_precision=fp16', '--xformers', '--cache_latents', '--gradient_checkpointing'])}
+2023-04-07 12:19:03,307 INFO: 开始训练模型,method:deambooth
+2023-04-07 12:19:03,312 INFO: 配置dreamboothconfig.toml文件
+2023-04-07 12:19:38,136 INFO: 图片批量打标签:../dataset/dreambooth/2_abd boy
+2023-04-07 12:20:12,691 INFO: 图片批量打标签:../dataset/dreambooth/2_adasda gril
+2023-04-07 12:20:48,249 INFO: 图片批量打标签:../dataset/dreambooth_reg/2_boy
+2023-04-07 12:21:23,945 INFO: 图片批量打标签:../dataset/dreambooth_reg/2_gril
+2023-04-07 12:21:23,945 INFO: 开始训练......
+2023-04-07 12:21:30,389 ERROR: {'message': CalledProcessError(1, ['python', '../train_db.py', '--pretrained_model_name_or_path=adasd', '--dataset_config=./dreamboothconfig.toml', '--output_dir=../dataset/dreambooth_out', '--output_name=dreamboothmodel--save_model_as=safetensors--prior_loss_weight=1.0', '--learning_rate=1e-6', '--max_train_steps=1600', '--use_8bit_adam', '--mixed_precision=fp16', '--xformers', '--cache_latents', '--gradient_checkpointing'])}

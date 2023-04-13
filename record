@@ -1,0 +1,29 @@
+训练画风 
+cd /home/aimall/lujiale/sd-scripts/finetune
+python tag_images_by_wd14_tagger.py --batch_size 4 ../dataset/huang/out
+python merge_dd_tags_to_metadata.py ../dataset/huang/out ../dataset/huang/out/meta_cap.json
+
+accelerate launch --num_cpu_threads_per_process 1 train_network.py 
+    --pretrained_model_name_or_path=/home/aimall/lujiale/sd-scripts/dalcefoPainting_3rd.ckpt
+    --train_data_dir=/home/aimall/lujiale/sd-scripts/huang/ --output_dir=/home/aimall/lujiale/sd-scripts/lora_train 
+    --reg_data_dir="" 
+    --resolution=512,768 --train_batch_size=1 --learning_rate=1e-4 
+    --max_train_steps=400 --mixed_precision=fp16 
+    --save_every_n_epochs=1 --save_model_as=safetensors --clip_skip=2 --seed=42 --color_aug 
+    --network_module=networks.lora
+    --in_json=home/aimall/lujiale/sd-scripts/dataset/huang/meta_cap.json
+
+--pretrained_model_name_or_path=/home/aimall/lujiale/stable-diffusion-webui/sd-scripts/dalcefoPainting_3rd.ckpt
+--train_data_dir=/home/aimall/lujiale/stable-diffusion-webui/sd-scripts/dreambooth_train_dataset
+--reg_data_dir=/home/aimall/lujiale/stable-diffusion-webui/sd-scripts/dreambooth_reg_dataset
+--output_dir=/home/aimall/lujiale/stable-diffusion-webui/sd-scripts/dreambooth_out
+--prior_loss_weight=1.0
+--resolution=256
+--train_batch_size=1
+--learning_rate=1e-6
+--max_train_steps=1600
+--use_8bit_adam
+--mixed_precision="fp16"
+--cache_latents
+--gradient_checkpointing
+

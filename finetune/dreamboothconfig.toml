@@ -1,0 +1,30 @@
+[[datasets]]
+resolution = 512
+batch_size = 1
+[[datasets.subsets]]
+image_dir = "../dataset/dreambooth/2_abd boy"
+caption_extension = ".caption"
+class_tokens = "boy"
+num_repeats = 2
+
+[[datasets.subsets]]
+image_dir = "../dataset/dreambooth/2_adasda gril"
+caption_extension = ".caption"
+class_tokens = "gril"
+num_repeats = 2
+
+[[datasets.subsets]]
+is_reg = true
+image_dir = "../dataset/dreambooth_reg/2_boy"
+class_tokens = "boy"
+num_repeats = 2
+
+[[datasets.subsets]]
+is_reg = true
+image_dir = "../dataset/dreambooth_reg/2_gril"
+class_tokens = "gril"
+num_repeats = 2
+
+
+[general]
+enable_bucket = true
