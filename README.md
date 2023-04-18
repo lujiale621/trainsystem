@@ -1,3 +1,4 @@
+python train_db.py --pretrained_model_name_or_path=/data1/lujiale/stable-diffusion-webui/models/Stable-diffusion/chilloutmix_NiPrunedFp32Fix.safetensors --dataset_config=./finetune/dreamboothconfig.toml --output_dir=./dataset/dreambooth_out --output_name=dreamboothmodel --save_model_as=safetensors --prior_loss_weight=1.0 --learning_rate=1e-6 --max_train_steps=1600 --use_8bit_adam --mixed_precision=fp16 --xformers --cache_latents --gradient_checkpointing
 This repository contains training, generation and utility scripts for Stable Diffusion.
 
 [__Change History__](#change-history) is moved to the bottom of the page.
